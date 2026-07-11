@@ -3,9 +3,18 @@
 	"name": "barbershop",
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"compatibility_date": "2026-07-11",
-	"compatibility_flags": ["nodejs_compat"],
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "barbershop-db",
+			"database_id": "809d9191-5a8c-4f10-b726-5c24636ac693"
+		}
+	]
 }

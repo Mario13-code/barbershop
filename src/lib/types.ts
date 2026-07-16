@@ -7,6 +7,7 @@ export interface Barber {
 	sort_order: number;
 	created_at: string;
 	updated_at: string;
+	booksy_url: string | null;
 }
 
 export interface Service {
@@ -18,4 +19,18 @@ export interface Service {
 	sort_order: number;
 	created_at: string;
 	updated_at: string;
+	barber_id: number | null;
+}
+
+export interface ShopInfo {
+	id: number;
+	shop_name: string;
+	address: string | null;
+	phone: string | null;
+	booksy_url: string | null;
+	hours_json: string | null;
+}
+
+export interface ServiceWithBarber extends Service {
+	barber_name: string | null;
 }

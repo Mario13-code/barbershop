@@ -1,5 +1,5 @@
-DELETE FROM barbers;
 DELETE FROM services;
+DELETE FROM barbers;
 DELETE FROM shop_info;
 
 INSERT INTO barbers (name, bio, specialty, sort_order) VALUES
@@ -14,7 +14,7 @@ INSERT INTO services (name, description, price_cents, duration_minutes, sort_ord
   ('Hot Towel Shave', 'Traditional straight razor hot towel shave.', 2500, 30, 3);
 
 INSERT INTO services (name, description, price_cents, duration_minutes, sort_order, barber_id) VALUES
-  ('Premium Fade + Design', 'Custom design fade, appointment only with Jamal.', 6000, 60, 4,
+  ('Haircut', 'Classic haircut, tailored to your style.', 4000, 30, 4,
     (SELECT id FROM barbers WHERE name = 'Jamal'));
 
 INSERT INTO shop_info (id, shop_name, booksy_url) VALUES

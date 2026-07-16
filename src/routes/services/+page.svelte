@@ -14,7 +14,12 @@
 	<ul>
 		{#each data.services as service (service.id)}
 			<li>
-				<h2>{service.name} — {formatPrice(service.price_cents)}</h2>
+				<h2>
+					{service.name} — {formatPrice(service.price_cents)}
+					{#if service.barber_name}
+						<span class="barber-tag">with {service.barber_name}</span>
+					{/if}
+				</h2>
 				{#if service.duration_minutes}
 					<p>{service.duration_minutes} minutes</p>
 				{/if}
@@ -25,3 +30,11 @@
 		{/each}
 	</ul>
 {/if}
+
+<style>
+	.barber-tag {
+		font-size: 0.85rem;
+		font-weight: normal;
+		color: #666;
+	}
+</style>

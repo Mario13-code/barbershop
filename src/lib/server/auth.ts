@@ -49,3 +49,35 @@ export async function verifyPassword(password: string, storedHash: string): Prom
 	const derivedBits = await deriveKey(password, salt);
 	return toHex(derivedBits) === hashHex;
 }
+
+export function generateSessionId(): string {
+	const bytes = crypto.getRandomValues(new Uint8Array(32));
+	return toHex(bytes);
+}
+
+export async function createSession(db: D1Database, userId: number): Promise<string> {
+	const sessionId = generateSessionId();
+	const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 7); // 7 days
+
+	await db
+		.prepare('INSERT INTO sessions (id, user_id, expires_at) VALUES (?, ?, ?)')
+		.bind(sessionId, userId, expiresAt.toISOString())
+		.run();
+
+	return sessionId;
+}
+
+export async function validateSession(db: D1Database, sessionId: string): Promise<number | null> {
+	const session = await db
+		.prepare('SELECT user_id, expires_at FROM sessions WHERE id = ?')
+		.bind(sessionId)
+		.first<{ user_id: number; expires_at: string }>();
+
+	if (!session) return null;
+	if (new Date(session.expires_at) < new Date()) {
+		await db.prepare('DELETE FROM sessions WHERE id = ?').bind(sessionId).run();
+		return null;
+	}
+
+	return session.user_id;
+}

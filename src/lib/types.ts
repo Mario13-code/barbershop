@@ -8,6 +8,8 @@ export interface Barber {
 	created_at: string;
 	updated_at: string;
 	booksy_url: string | null;
+	years_experience: number | null;
+	instagram_url: string | null;
 }
 
 export interface Service {

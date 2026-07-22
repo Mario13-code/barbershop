@@ -37,3 +37,12 @@ export interface ShopInfo {
 	hours_json: string | null;
 	about_text: string | null;
 }
+
+export interface Faq {
+	id: number;
+	question: string;
+	answer: string;
+	sort_order: number;
+	created_at: string;
+	updated_at: string;
+}

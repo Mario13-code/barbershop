@@ -15,6 +15,7 @@
 		<a href="/about">About</a>
 		<a href="/contact">Contact</a>
 		<a href="/gallery">Gallery</a>
+		<a href="/faq">FAQ</a>
 	</nav>
 	{#if data.shopInfo?.booksy_url}
 		<a href={data.shopInfo.booksy_url} target="_blank" rel="noopener noreferrer" class="book-now">

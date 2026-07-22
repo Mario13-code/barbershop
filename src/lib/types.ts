@@ -46,3 +46,12 @@ export interface Faq {
 	created_at: string;
 	updated_at: string;
 }
+
+export interface Testimonial {
+	id: number;
+	client_name: string;
+	quote: string;
+	sort_order: number;
+	created_at: string;
+	updated_at: string;
+}

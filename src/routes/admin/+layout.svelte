@@ -8,6 +8,7 @@
 	<a href="/admin/services">Services</a>
 	<a href="/admin/shop-info">Shop Info</a>
 	<a href="/admin/faqs">FAQs</a>
+	<a href="/admin/testimonials">Testimonials</a>
 </nav>
 
 {@render children()}

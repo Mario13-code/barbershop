@@ -26,6 +26,7 @@ export const actions: Actions = {
 		const phone = formData.get('phone');
 		const booksy_url = formData.get('booksy_url');
 		const hours_json = formData.get('hours_json');
+		const about_text = formData.get('about_text');
 
 		if (typeof shop_name !== 'string' || shop_name.trim() === '') {
 			return fail(400, { error: 'Shop name is required.' });
@@ -33,21 +34,23 @@ export const actions: Actions = {
 
 		await db
 			.prepare(
-				`INSERT INTO shop_info (id, shop_name, address, phone, booksy_url, hours_json)
-				 VALUES (1, ?, ?, ?, ?, ?)
-				 ON CONFLICT(id) DO UPDATE SET
-				   shop_name = excluded.shop_name,
-				   address = excluded.address,
-				   phone = excluded.phone,
-				   booksy_url = excluded.booksy_url,
-				   hours_json = excluded.hours_json`
+				`INSERT INTO shop_info (id, shop_name, address, phone, booksy_url, hours_json, about_text)
+		 VALUES (1, ?, ?, ?, ?, ?, ?)
+		 ON CONFLICT(id) DO UPDATE SET
+		   shop_name = excluded.shop_name,
+		   address = excluded.address,
+		   phone = excluded.phone,
+		   booksy_url = excluded.booksy_url,
+		   hours_json = excluded.hours_json,
+		   about_text = excluded.about_text`
 			)
 			.bind(
 				shop_name,
 				address || null,
 				phone || null,
 				booksy_url || null,
-				typeof hours_json === 'string' ? hours_json : null
+				typeof hours_json === 'string' ? hours_json : null,
+				about_text || null
 			)
 			.run();
 

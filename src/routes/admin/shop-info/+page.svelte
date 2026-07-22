@@ -61,6 +61,11 @@
 		<input type="url" name="booksy_url" value={data.shopInfo?.booksy_url ?? ''} />
 	</label>
 
+	<label>
+		About (shown on the About page)
+		<textarea name="about_text">{data.shopInfo?.about_text ?? ''}</textarea>
+	</label>
+
 	<fieldset>
 		<legend>Hours</legend>
 		{#each hours as day}

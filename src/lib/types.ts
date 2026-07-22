@@ -24,6 +24,10 @@ export interface Service {
 	barber_id: number | null;
 }
 
+export interface ServiceWithBarber extends Service {
+	barber_name: string | null;
+}
+
 export interface ShopInfo {
 	id: number;
 	shop_name: string;
@@ -31,8 +35,5 @@ export interface ShopInfo {
 	phone: string | null;
 	booksy_url: string | null;
 	hours_json: string | null;
-}
-
-export interface ServiceWithBarber extends Service {
-	barber_name: string | null;
+	about_text: string | null;
 }

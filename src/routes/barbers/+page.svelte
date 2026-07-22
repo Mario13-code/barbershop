@@ -10,7 +10,7 @@
 	<ul>
 		{#each data.barbers as barber (barber.id)}
 			<li>
-				<h2>{barber.name}</h2>
+				<h2><a href="/barbers/{barber.id}">{barber.name}</a></h2>
 				{#if barber.specialty}
 					<p><strong>{barber.specialty}</strong></p>
 				{/if}

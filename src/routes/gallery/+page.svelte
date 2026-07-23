@@ -7,8 +7,15 @@
 	];
 </script>
 
-<h1>Gallery</h1>
+<svelte:head>
+	<title>Gallery | Barbershop</title>
+	<meta
+		name="description"
+		content="See photos of our shop, our work, and the space where we bring your next cut to life."
+	/>
+</svelte:head>
 
+<h1>Gallery</h1>
 <div class="grid">
 	{#each photos as photo}
 		<img src={photo.src} alt={photo.alt} />

@@ -2,6 +2,14 @@
 	let { data } = $props();
 </script>
 
+<svelte:head>
+	<title>Our Barbers | Barbershop</title>
+	<meta
+		name="description"
+		content="Meet our team of barbers — view specialties, experience, and book your next appointment."
+	/>
+</svelte:head>
+
 <h1>Our Barbers</h1>
 
 {#if data.barbers.length === 0}

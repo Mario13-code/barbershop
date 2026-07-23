@@ -2,8 +2,15 @@
 	let { data } = $props();
 </script>
 
-<h1>What Our Clients Say</h1>
+<svelte:head>
+	<title>Testimonials | Barbershop</title>
+	<meta
+		name="description"
+		content="Read what our clients have to say about their experience at our shop."
+	/>
+</svelte:head>
 
+<h1>What Our Clients Say</h1>
 {#if data.testimonials.length === 0}
 	<p>No testimonials yet.</p>
 {:else}
@@ -16,15 +23,13 @@
 {/if}
 
 <style>
-	table {
-		width: 100%;
-		border-collapse: collapse;
-		margin-top: 1rem;
+	blockquote {
+		margin: 0 0 1.5rem 0;
+		padding-left: 1rem;
+		border-left: 3px solid var(--color-gold);
 	}
-	th,
-	td {
-		text-align: left;
-		padding: 0.5rem;
-		border-bottom: 1px solid var(--color-border);
+	footer {
+		margin-top: 0.5rem;
+		font-weight: 600;
 	}
 </style>

@@ -6,8 +6,15 @@
 	}
 </script>
 
-<h1>Our Services</h1>
+<svelte:head>
+	<title>Our Services | Barbershop</title>
+	<meta
+		name="description"
+		content="Browse our full menu of haircuts, beard trims, and grooming services with pricing."
+	/>
+</svelte:head>
 
+<h1>Our Services</h1>
 {#if data.services.length === 0}
 	<p>No services found.</p>
 {:else}

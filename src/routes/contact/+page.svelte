@@ -21,16 +21,21 @@
 	);
 </script>
 
-<h1>Contact & Hours</h1>
+<svelte:head>
+	<title>Contact & Hours | Barbershop</title>
+	<meta
+		name="description"
+		content="Find our address, phone number, hours, and how to book your next appointment."
+	/>
+</svelte:head>
 
+<h1>Contact & Hours</h1>
 {#if data.shopInfo?.address}
 	<p>{data.shopInfo.address}</p>
 {/if}
-
 {#if data.shopInfo?.phone}
 	<p>{data.shopInfo.phone}</p>
 {/if}
-
 {#if hours.length > 0}
 	<h2>Hours</h2>
 	<ul>
@@ -39,7 +44,6 @@
 		{/each}
 	</ul>
 {/if}
-
 {#if data.shopInfo?.booksy_url}
 	<a href={data.shopInfo.booksy_url} target="_blank" rel="noopener noreferrer">Book Now</a>
 {/if}

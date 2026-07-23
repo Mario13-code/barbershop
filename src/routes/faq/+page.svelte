@@ -2,8 +2,15 @@
 	let { data } = $props();
 </script>
 
-<h1>Frequently Asked Questions</h1>
+<svelte:head>
+	<title>FAQ | Barbershop</title>
+	<meta
+		name="description"
+		content="Answers to common questions about walk-ins, appointments, and what to expect at our shop."
+	/>
+</svelte:head>
 
+<h1>Frequently Asked Questions</h1>
 {#if data.faqs.length === 0}
 	<p>No FAQs yet.</p>
 {:else}

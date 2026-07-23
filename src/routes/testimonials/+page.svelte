@@ -16,13 +16,15 @@
 {/if}
 
 <style>
-	blockquote {
-		margin: 0 0 1.5rem 0;
-		padding-left: 1rem;
-		border-left: 3px solid #111;
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-top: 1rem;
 	}
-	footer {
-		margin-top: 0.5rem;
-		font-weight: 600;
+	th,
+	td {
+		text-align: left;
+		padding: 0.5rem;
+		border-bottom: 1px solid var(--color-border);
 	}
 </style>

@@ -18,7 +18,7 @@
 		display: flex;
 		gap: 1.5rem;
 		padding: 1rem 2rem;
-		background: #f4f4f4;
-		border-bottom: 1px solid #ddd;
+		background: var(--color-bg-muted);
+		border-bottom: 1px solid var(--color-border);
 	}
 </style>

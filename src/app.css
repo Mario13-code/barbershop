@@ -1,0 +1,15 @@
+:root {
+	--color-black: #111111;
+	--color-white: #ffffff;
+	--color-gold: #f2b705;
+	--color-blue: #1d5fa8;
+	--color-blue-light: #3b8fe0;
+	--color-border: #e0e0e0;
+	--color-text-muted: #666666;
+}
+
+body {
+	color: var(--color-black);
+	background: var(--color-white);
+	font-family: system-ui, sans-serif;
+}

@@ -77,10 +77,10 @@
 		margin-bottom: 1.5rem;
 	}
 	.error {
-		color: #c0392b;
+		color: var(--color-error);
 	}
 	.delete {
-		background: #c0392b;
-		color: white;
+		background: var(--color-error);
+		color: var(--color-white);
 	}
 </style>

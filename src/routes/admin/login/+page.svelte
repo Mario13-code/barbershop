@@ -32,6 +32,6 @@
 	}
 
 	.error {
-		color: #c0392b;
+		color: var(--color-error);
 	}
 </style>

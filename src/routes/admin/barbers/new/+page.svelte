@@ -61,6 +61,6 @@
 		max-width: 480px;
 	}
 	.error {
-		color: #c0392b;
+		color: var(--color-error);
 	}
 </style>

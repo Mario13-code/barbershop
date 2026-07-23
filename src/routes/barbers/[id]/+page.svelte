@@ -54,15 +54,19 @@
 	}
 	.book-now {
 		display: inline-block;
-		background: #111;
-		color: white;
+		background: var(--color-gold);
+		color: var(--color-black);
 		padding: 0.5rem 1.25rem;
 		border-radius: 6px;
 		text-decoration: none;
 		font-weight: 600;
 	}
+	.book-now:hover {
+		background: var(--color-blue);
+		color: var(--color-white);
+	}
 	.walk-in {
 		font-weight: 600;
-		color: #2e7d32;
+		color: var(--color-success);
 	}
 </style>

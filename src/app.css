@@ -6,6 +6,8 @@
 	--color-blue-light: #3b8fe0;
 	--color-border: #e0e0e0;
 	--color-text-muted: #666666;
+	--color-error: #c0392b;
+	--color-success: #2e7d32;
 }
 
 body {

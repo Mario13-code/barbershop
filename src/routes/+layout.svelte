@@ -11,7 +11,9 @@
 
 <header>
 	<div class="header-bar">
-		<a href="/" class="brand">{data.shopInfo?.shop_name ?? 'Barbershop'}</a>
+		<a href="/" class="brand">
+			<img src="/logo.png" alt={data.shopInfo?.shop_name ?? 'Barbershop'} class="logo" />
+		</a>
 
 		<button
 			class="menu-toggle"
@@ -50,20 +52,24 @@
 
 <style>
 	header {
-		border-bottom: 1px solid var(--color-border);
+		background: var(--color-black);
+		border-bottom: 1px solid var(--color-black);
 	}
 	.header-bar {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1rem 1.5rem;
+		padding: 0.75rem 1.5rem;
 		position: relative;
 	}
 	.brand {
-		color: var(--color-black);
-		text-decoration: none;
-		font-weight: 700;
-		font-size: 1.1rem;
+		display: inline-flex;
+		align-items: center;
+	}
+	.logo {
+		height: 64px;
+		width: auto;
+		display: block;
 	}
 	.menu-toggle {
 		display: flex;
@@ -80,7 +86,7 @@
 	.menu-toggle span {
 		display: block;
 		height: 2px;
-		background: var(--color-black);
+		background: var(--color-white);
 		border-radius: 2px;
 	}
 	nav {
@@ -90,8 +96,7 @@
 		top: 100%;
 		left: 0;
 		right: 0;
-		background: var(--color-white);
-		border-bottom: 1px solid var(--color-border);
+		background: var(--color-black);
 		padding: 1rem 1.5rem;
 		gap: 1rem;
 	}
@@ -99,7 +104,7 @@
 		display: flex;
 	}
 	nav a {
-		color: var(--color-black);
+		color: var(--color-white);
 		text-decoration: none;
 		font-weight: 500;
 	}

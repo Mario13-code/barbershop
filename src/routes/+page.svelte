@@ -80,6 +80,16 @@
 	}
 	.hero-graphic {
 		background: var(--color-blue);
+		position: relative;
+	}
+	.hero-graphic::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background:
+			linear-gradient(to bottom, var(--color-black) 0%, transparent 20%),
+			linear-gradient(to top, var(--color-white) 0%, transparent 15%);
+		pointer-events: none;
 	}
 	.hero-graphic img {
 		width: 100%;
@@ -111,6 +121,10 @@
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+		}
+
+		.hero-graphic::after {
+			background: linear-gradient(to right, var(--color-black) 0%, transparent 20%);
 		}
 	}
 </style>

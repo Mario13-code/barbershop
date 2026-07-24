@@ -5,14 +5,26 @@
 	--color-blue: #1d5fa8;
 	--color-blue-light: #3b8fe0;
 	--color-border: #e0e0e0;
-	--color-text-muted: #666666;
+	--color-text-muted: #4a4a47;
 	--color-error: #c0392b;
 	--color-success: #2e7d32;
 	--color-bg-muted: #f4f4f4;
+	--color-bg-warm: #faf8f3;
+
+	--font-display: 'Bebas Neue', system-ui, sans-serif;
+	--font-body: 'Inter', system-ui, sans-serif;
+	--font-mono: 'Courier New', monospace;
 }
 
 body {
 	color: var(--color-black);
 	background: var(--color-white);
-	font-family: system-ui, sans-serif;
+	font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-display);
+	letter-spacing: 0.02em;
 }
